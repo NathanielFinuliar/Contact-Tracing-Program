@@ -79,8 +79,10 @@ def modify_items(md):
                     for i in range(len(status)):
                         print(f"{i+1}) {status[i]}")
                     state = int(input("Selected status that you want to update: "))
-                    
+
                     new_value = status[state - 1]
+                else:
+                    new_value = input("Please enter new value: ")
 
 def delete_items(md):
     while True:
