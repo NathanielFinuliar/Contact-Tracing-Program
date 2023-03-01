@@ -83,6 +83,7 @@ def modify_items(md):
                     new_value = status[state - 1]
                 else:
                     new_value = input("Please enter new value: ")
+                set_type = {"Age":int,"Address":str,"Phone Number":str,"Vaccination Status":str}
 
 def delete_items(md):
     while True:
