@@ -87,6 +87,12 @@ def modify_items(md):
                 new_value = set_type[id_[modify_items - 2]](new_value)
                 md[key_name][id_[modify_items-2]] = new_value
                 print("Saved!")
+            else:
+                print("Sorry, we can't find this data")
+            return
+        else:
+            print("There is no data to modify")
+            return
 
 def delete_items(md):
     while True:
