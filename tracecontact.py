@@ -17,8 +17,17 @@ def option_getter():
             print()
             display_menu(menu_)
             option = int(input("What do you want to do? (1-6): "))
+            if option != 6 and option in range(1,6):
+                function_caller[option](main_dictionary)
+            elif option == 6:
+                function_caller[option]()
+            else:
+                print("Range exceeded!")
+            return
         except:
             print("Invalid input try again!")
+
+function_caller={}
 
 loop_holder = True
 first_run = True
