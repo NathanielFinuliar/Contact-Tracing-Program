@@ -65,7 +65,10 @@ def modify_items(md):
             key_name = f_name + " " + l_name
 
 def delete_items(md):
-
+    while True:
+        if len(md.keys()) == 0:
+            print("There is no data to delete!")
+            return
 
 def option_getter():
     while True:
