@@ -12,3 +12,10 @@ def display_menu(me):
     print("="*20)
 
 def option_getter():
+    while True:
+        try:
+            print()
+            display_menu(menu_)
+            option = int(input("What do you want to do? (1-6): "))
+        except:
+            print("Invalid input try again!")
