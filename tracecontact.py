@@ -55,7 +55,7 @@ def search_items(md):
                 print("Sorry, we can't find this data")
         else:
             print("This is no data available!")
-            return
+            return 
 
 def option_getter():
     while True:
