@@ -51,6 +51,11 @@ def search_items(md):
                         print(f"{i.capitalize()} : {x}")
                     print("-"*20)
                 return
+            else:
+                print("Sorry, we can't find this data")
+        else:
+            print("This is no data available!")
+            return
 
 def option_getter():
     while True:
