@@ -64,6 +64,9 @@ def modify_items(md):
             l_name = input("Enter Last name: ")
             key_name = f_name + " " + l_name
 
+def delete_items(md):
+
+
 def option_getter():
     while True:
         try:
@@ -80,7 +83,7 @@ def option_getter():
         except:
             print("Invalid input try again!")
 
-function_caller ={1:add_item,2:search_items,3:modify_items}
+function_caller ={1:add_item,2:search_items,3:modify_items,4:delete_items}
 
 loop_holder = True
 first_run = True
