@@ -69,6 +69,15 @@ def delete_items(md):
         if len(md.keys()) == 0:
             print("There is no data to delete!")
             return
+        else:
+            f_name = input("Enter First name: ")
+            l_name = input("Enter Last name: ")
+            del_key = f_name + " " + l_name
+            if del_key in md.keys():
+                print(f"Trying to delete ID {del_key}...")
+            else:
+                print("Sorry, we couldn't delete this data , seem like it doesn't exist")
+            return
 
 def option_getter():
     while True:
