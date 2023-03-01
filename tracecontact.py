@@ -12,18 +12,18 @@ def display_menu(me):
     print("="*20)
 
 def add_item(md):
-        while True:
-            try:
-                name = input("Enter First name: ")
-                sur_name = input("Enter Last name: ")
-                fname = name+" "+sur_name
-                age = int(input("Enter Age: "))
-                address = input("Enter Address: ")
-                pnum = input("Enter Phone Number: ")
-                vaccinated = input("Enter your Vaccination Status: ")
-                break
-            except:
-                print("Invalid input!")
+    while True:
+        try:
+            name = input("Enter First name: ")
+            sur_name = input("Enter Last name: ")
+            fname = name+" "+sur_name
+            age = int(input("Enter Age: "))
+            address = input("Enter Address: ")
+            pnum = input("Enter Phone Number: ")
+            vaccinated = input("Enter your Vaccination Status: ")
+            break
+        except:
+            print("Invalid input!")
 sub_dictionary = {}
 key_forsubdict = ["Age", "Address", "Phone Number","Vaccination Status"]
 value_forsubdict = [age,address,pnum,vaccinated]
