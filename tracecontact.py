@@ -19,3 +19,6 @@ def option_getter():
             option = int(input("What do you want to do? (1-6): "))
         except:
             print("Invalid input try again!")
+
+loop_holder = True
+first_run = True
