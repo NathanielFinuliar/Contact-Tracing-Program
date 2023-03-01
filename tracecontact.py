@@ -82,6 +82,10 @@ def delete_items(md):
             return
 
 def show_alldata(md):
+    if len(md.keys()) == 0:
+            print("There is no data to show!")
+            return
+    else:
 
 def option_getter():
     while True:
