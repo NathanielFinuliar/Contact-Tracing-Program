@@ -39,7 +39,18 @@ def search_items(md):
             f_name = input("Enter First name: ")
             l_name = input("Enter Last name: ")
             key_name = f_name + " " + l_name
-
+            if key_name in md.keys():
+                search_items = int(input("What are you looking for? \n1) Age\n2) Address\n3) Phone Number \n4) Vaccination Status\n5) All data\n: "))
+                if search_items != 5:
+                    print(f"{id_[search_items - 1].capitalize()} : {md[key_name][id_[search_items-1]]}")
+                else:
+                    print()
+                    print(f"All datas contain for {key_name}:")
+                    print("-"*20)
+                    for i,x in md[key_name].items():
+                        print(f"{i.capitalize()} : {x}")
+                    print("-"*20)
+                return
 
 def option_getter():
     while True:
