@@ -101,6 +101,10 @@ def exit_():
             if ask=='y':
                 loop_holder = False
                 print("Exiting...")
+                print(" ")
+                print("Thank you for using this program")
+                print("Always take care and have a good day!")
+                print(" ")
             else:
                 option_getter()
                 loop_holder = True
