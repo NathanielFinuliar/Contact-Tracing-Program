@@ -10,3 +10,5 @@ def display_menu(me):
     for i in range(len(me)):
         print(f"{i+1} -> {me[i]}")
     print("="*20)
+
+def option_getter():
