@@ -81,6 +81,8 @@ def delete_items(md):
                 print("Sorry, we couldn't delete this data , seem like it doesn't exist")
             return
 
+def show_alldata(md):
+
 def option_getter():
     while True:
         try:
@@ -97,7 +99,7 @@ def option_getter():
         except:
             print("Invalid input try again!")
 
-function_caller ={1:add_item,2:search_items,3:modify_items,4:delete_items}
+function_caller ={1:add_item,2:search_items,3:modify_items,4:delete_items,5:show_alldata}
 
 loop_holder = True
 first_run = True
