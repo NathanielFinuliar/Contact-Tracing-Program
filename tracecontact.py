@@ -93,6 +93,8 @@ def show_alldata(md):
                 print(f"{sub.capitalize()} : {element}")
             print("-"*40) 
 
+def exit_():
+
 def option_getter():
     while True:
         try:
@@ -109,7 +111,7 @@ def option_getter():
         except:
             print("Invalid input try again!")
 
-function_caller ={1:add_item,2:search_items,3:modify_items,4:delete_items,5:show_alldata}
+function_caller ={1:add_item,2:search_items,3:modify_items,4:delete_items,5:show_alldata,6:exit_}
 
 loop_holder = True
 first_run = True
