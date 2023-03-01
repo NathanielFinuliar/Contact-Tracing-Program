@@ -32,6 +32,14 @@ def add_item(md):
     md[fname] = sub_dictionary
     print("Your Contact Information is now Saved!")
 
+def search_items(md):
+    while True:
+        if len(md.keys()) != 0:
+            id_=["Age","Address","Phone Number","Vaccination Status"]
+            f_name = input("Enter First name: ")
+            l_name = input("Enter Last name: ")
+
+
 def option_getter():
     while True:
         try:
@@ -48,7 +56,7 @@ def option_getter():
         except:
             print("Invalid input try again!")
 
-function_caller ={1:add_item}
+function_caller ={1:add_item,2:search_items}
 
 loop_holder = True
 first_run = True
