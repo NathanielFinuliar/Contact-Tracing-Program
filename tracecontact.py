@@ -86,6 +86,12 @@ def show_alldata(md):
             print("There is no data to show!")
             return
     else:
+        for num,data in md.items():
+            print()
+            print(f"* * * {num} * * *")
+            for sub,element in data.items():
+                print(f"{sub.capitalize()} : {element}")
+            print("-"*40)
 
 def option_getter():
     while True:
