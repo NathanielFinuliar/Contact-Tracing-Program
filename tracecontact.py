@@ -95,6 +95,18 @@ def show_alldata(md):
 
 def exit_():
     global loop_holder
+    while True:
+        ask = input("Exit ? (y/n) : ").lower()
+        if ask in ['y','n']:
+            if ask=='y':
+                loop_holder = False
+                print("Exiting...")
+            else:
+                option_getter()
+                loop_holder = True
+            return
+        else:
+            print("Invalid input try again!")
 
 def option_getter():
     while True:
