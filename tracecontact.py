@@ -66,6 +66,10 @@ def modify_items(md):
             if key_name in md.keys():
                 id_=["Age","Address","Phone Number","Vaccination Status"]
                 modify_items = int(input("What do you want to modify? \n1) Name \n2) Age\n3) Address\n4) Phone Number \n5) Vaccination Status\n: "))
+                if modify_items == 1:
+                    newf_name = input("Enter New First name you want to modify: ")
+                    newl_name = input("Enter New Last name you want to modify: ")
+                    newkey_name = newf_name + " " + newl_name
 
 def delete_items(md):
     while True:
