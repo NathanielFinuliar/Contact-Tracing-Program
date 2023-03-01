@@ -84,6 +84,9 @@ def modify_items(md):
                 else:
                     new_value = input("Please enter new value: ")
                 set_type = {"Age":int,"Address":str,"Phone Number":str,"Vaccination Status":str}
+                new_value = set_type[id_[modify_items - 2]](new_value)
+                md[key_name][id_[modify_items-2]] = new_value
+                print("Saved!")
 
 def delete_items(md):
     while True:
