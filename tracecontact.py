@@ -75,6 +75,8 @@ def delete_items(md):
             del_key = f_name + " " + l_name
             if del_key in md.keys():
                 print(f"Trying to delete ID {del_key}...")
+                del md[del_key]
+                print("Successfully deleted!")
             else:
                 print("Sorry, we couldn't delete this data , seem like it doesn't exist")
             return
