@@ -26,3 +26,12 @@ while loop_holder:
     if first_run:
         option_getter()
         first_run = False
+    else:
+        con = input("Do you want to continue (y/n)? : ").lower()
+        if con in ['y','n']:
+            if con == 'n':
+                loop_holder = False
+            else:
+                option_getter()
+        else:
+            print("Invalid input try again!")
