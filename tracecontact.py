@@ -30,7 +30,7 @@ def add_item(md):
     for i,x in zip(key_forsubdict,value_forsubdict):
         sub_dictionary[i] = x
     md[fname] = sub_dictionary
-    print("Saved!")
+    print("Your Contact Information is now Saved!")
 
 def option_getter():
     while True:
