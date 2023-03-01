@@ -94,6 +94,7 @@ def show_alldata(md):
             print("-"*40) 
 
 def exit_():
+    global loop_holder
 
 def option_getter():
     while True:
