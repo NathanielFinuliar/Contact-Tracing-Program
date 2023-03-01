@@ -6,10 +6,10 @@ main_dictionary = {"Jonathan Finuliar":{"Age":22,"Address":"Malabon","Phone Numb
 
 def display_menu(me):
     print("----Contact tracing!---")
-    print("="*20)
+    print("="*23)
     for i in range(len(me)):
         print(f"{i+1} -> {me[i]}")
-    print("="*20)
+    print("="*23)
 
 def add_item(md):
     while True:
