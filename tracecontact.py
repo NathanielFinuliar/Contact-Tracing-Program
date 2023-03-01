@@ -22,3 +22,7 @@ def option_getter():
 
 loop_holder = True
 first_run = True
+while loop_holder:
+    if first_run:
+        option_getter()
+        first_run = False
