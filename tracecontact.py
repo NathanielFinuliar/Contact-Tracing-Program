@@ -24,9 +24,13 @@ def add_item(md):
             break
         except:
             print("Invalid input!")
-sub_dictionary = {}
-key_forsubdict = ["Age", "Address", "Phone Number","Vaccination Status"]
-value_forsubdict = [age,address,pnum,vaccinated]
+    sub_dictionary = {}
+    key_forsubdict = ["Age", "Address", "Phone Number","Vaccination Status"]
+    value_forsubdict = [age,address,pnum,vaccinated]
+    for i,x in zip(key_forsubdict,value_forsubdict):
+        sub_dictionary[i] = x
+    md[fname] = sub_dictionary
+    print("Saved!")
 
 def option_getter():
     while True:
