@@ -24,6 +24,9 @@ def add_item(md):
                 break
             except:
                 print("Invalid input!")
+sub_dictionary = {}
+key_forsubdict = ["Age", "Address", "Phone Number","Vaccination Status"]
+value_forsubdict = [age,address,pnum,vaccinated]
 
 def option_getter():
     while True:
