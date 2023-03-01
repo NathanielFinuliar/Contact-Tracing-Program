@@ -70,6 +70,10 @@ def modify_items(md):
                     newf_name = input("Enter New First name you want to modify: ")
                     newl_name = input("Enter New Last name you want to modify: ")
                     newkey_name = newf_name + " " + newl_name
+                    md[newkey_name] = md[key_name]
+                    del md[key_name]
+                    print('Saved')
+                    return
 
 def delete_items(md):
     while True:
