@@ -11,6 +11,8 @@ def display_menu(me):
         print(f"{i+1} -> {me[i]}")
     print("="*20)
 
+def add_item(md):
+
 def option_getter():
     while True:
         try:
@@ -27,7 +29,7 @@ def option_getter():
         except:
             print("Invalid input try again!")
 
-function_caller={}
+function_caller ={1:add_item}
 
 loop_holder = True
 first_run = True
