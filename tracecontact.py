@@ -38,6 +38,7 @@ def search_items(md):
             id_=["Age","Address","Phone Number","Vaccination Status"]
             f_name = input("Enter First name: ")
             l_name = input("Enter Last name: ")
+            key_name = f_name + " " + l_name
 
 
 def option_getter():
