@@ -74,6 +74,13 @@ def modify_items(md):
                     del md[key_name]
                     print('Saved')
                     return
+                elif modify_items == 5:
+                    status = ["Vaccinated","Unvaccinated","Boosted"]
+                    for i in range(len(status)):
+                        print(f"{i+1}) {status[i]}")
+                    state = int(input("Selected status that you want to update: "))
+                    
+                    new_value = status[state - 1]
 
 def delete_items(md):
     while True:
