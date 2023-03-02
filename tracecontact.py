@@ -5,7 +5,7 @@ main_dictionary = {"Jonathan Finuliar":{"Age":22,"Address":"Malabon","Phone Numb
                    "Eve Campo":{"Age":18,"Address":"Navotas","Phone Number":"09988842314","Vaccination Status": "Boosted"}}
 
 def display_menu(me):
-    print("/"*39)
+    print("/"*39) 
     print("$"," "*16, " "*18, "$")  
     print("$"," "* 5, "CONTACT TRACING PROGRAM", " " *5,"$")
     print("$"," " * 3, "coded by Nathaniel Finuliar", " " *3,"$")
@@ -32,29 +32,32 @@ def add_item(md):
             break
         except:
             print("Invalid input!")
-    sub_dictionary = {}
-    key_forsubdict = ["Age", "Address", "Phone Number","Vaccination Status"]
-    value_forsubdict = [age,address,pnum,vaccinated]
-    for i,x in zip(key_forsubdict,value_forsubdict):
-        sub_dictionary[i] = x
-    md[fname] = sub_dictionary
+    sub_dictionary = {}    # Create dictionary to be value
+    key_forsubdict = ["Age", "Address", "Phone Number","Vaccination Status"]  # Create list that contains key
+    value_forsubdict = [age,address,pnum,vaccinated]   # Create list that contains value
+    for i,x in zip(key_forsubdict,value_forsubdict): # Merge key and value using for loop combine with zip
+        sub_dictionary[i] = x   # Assign value to key
+    md[fname] = sub_dictionary  # Add new agrument to dictionary
     print("Your Contact Information is now Saved!")
 
 def search_items(md):
     while True:
         if len(md.keys()) != 0:
-            id_=["Age","Address","Phone Number","Vaccination Status"]
-            f_name = input("Enter First name: ")
+            id_=["Age","Address","Phone Number","Vaccination Status"]  # Create list for user to pick option
+            # Ask for name
+            f_name = input("Enter First name: ") 
             l_name = input("Enter Last name: ")
             key_name = f_name + " " + l_name
             if key_name in md.keys():
                 search_items = int(input("What are you looking for? \n1) Age\n2) Address\n3) Phone Number \n4) Vaccination Status\n5) All data\n: "))
                 if search_items != 5:
+                    # Print key as capotalized and value
                     print(f"{id_[search_items - 1].capitalize()} : {md[key_name][id_[search_items-1]]}")
                 else:
-                    print()
+                    print() # Show key name
                     print(f"All datas contain for {key_name}:")
                     print("-"*40)
+                    # For loop to print all items
                     for i,x in md[key_name].items():
                         print(f"{i.capitalize()} : {x}")
                     print("-"*40)
