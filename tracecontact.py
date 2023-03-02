@@ -128,17 +128,19 @@ def show_alldata(md):
             print("There is no data to show!")
             return
     else:
+        # For loop to print the data
         for num,data in md.items():
             print()
             print(f"✯ ✯ ✯ {num} ✯ ✯ ✯")
             for sub,element in data.items():
-                print(f"{sub.capitalize()} : {element}")
+                # Print out value as capitalized key and follow by value
+                print(f"{sub.capitalize()} : {element}") 
             print("."*35) 
 
 def exit_():
-    global loop_holder
+    global loop_holder #  Declare global variables for later use
     while True:
-        ask = input("Exit ? (y/n) : ").lower()
+        ask = input("Exit ? (y/n) : ").lower() # Ask user if user want to continue
         if ask in ['y','n']:
             if ask=='y':
                 loop_holder = False
