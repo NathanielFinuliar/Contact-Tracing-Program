@@ -146,7 +146,8 @@ def exit_():
                 loop_holder = False
                 print("Exiting...")
                 print(" ")
-                print("Thank you for using this program!")
+                print("==>", "THANK YOU FOR USING THIS PROGRAM","<==")
+                print("-"*5, "GOD BLESS and HAVE A NICE DAY", "-"*5)
                 print(" ")
             else:
                 option_getter()
