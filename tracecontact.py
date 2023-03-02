@@ -108,16 +108,16 @@ def modify_items(md):
 
 def delete_items(md):
     while True:
-        if len(md.keys()) == 0: #check if no data 
+        if len(md.keys()) == 0: # Check if no data in dictionary
             print("There is no data to delete!")
             return
         else:
             f_name = input("Enter First name: ")
             l_name = input("Enter Last name: ")
             del_key = f_name + " " + l_name
-            if del_key in md.keys():  #Check if user's input is valid in dictionary
+            if del_key in md.keys():  # Check if user's input is valid in dictionary
                 print(f"Trying to delete ID of {del_key}...")
-                del md[del_key] #delete item    
+                del md[del_key] # Delete an item    
                 print("Successfully deleted!")
             else:
                 print("Sorry, we couldn't delete this data , seem like it doesn't exist")
