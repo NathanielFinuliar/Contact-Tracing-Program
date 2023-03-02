@@ -158,33 +158,43 @@ def exit_():
 def option_getter():
     while True:
         try:
+            # Call display_menu function
             print()
             display_menu(menu_)
+            # Ask for input
             option = int(input("What do you want to do? (1-6): "))
+            # Check if input is in range 1 to 5 and not equal to 6
             if option != 6 and option in range(1,6):
                 function_caller[option](main_dictionary)
+            # If option = 6 then call function_caller without argument
             elif option == 6:
                 function_caller[option]()
+            # Else print error message
             else:
                 print("Range exceeded!")
             return
         except:
             print("Invalid input try again!")
 
+# Function caller like previous one in order to access and use it
+# User need to access the key then assign the parameter that needed for function
 function_caller ={1:add_item,2:search_items,3:modify_items,4:delete_items,5:show_alldata,6:exit_}
 
+# Set boolean to hold cases
 loop_holder = True
-first_run = True
+first_run = True # Set boolean to check if it's a first run
 while loop_holder:
     if first_run:
-        option_getter()
-        first_run = False
+        option_getter() # Call option_getter () function
+        first_run = False  # Set boolean to False
+    # If it's a second run or so on
     else:
         con = input("Do you want to continue (y/n)? : ").lower()
-        if con in ['y','n']:
-            if con == 'n':
+        if con in ['y','n']: 
+            # If it's == n exit loop
+            if con == 'n':  
                 loop_holder = False
             else:
-                option_getter()
+                option_getter() # Else call option_getter()
         else:
             print("Invalid input try again!")
