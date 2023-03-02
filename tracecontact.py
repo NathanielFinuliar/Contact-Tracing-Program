@@ -75,16 +75,16 @@ def modify_items(md):
             l_name = input("Enter Last name: ")
             key_name = f_name + " " + l_name
             if key_name in md.keys():
-                id_=["Age","Address","Phone Number","Vaccination Status"]
+                id_=["Age","Address","Phone Number","Vaccination Status"] # Create list for user to pick option
                 modify_items = int(input("What do you want to modify? \n1) Name \n2) Age\n3) Address\n4) Phone Number \n5) Vaccination Status\n: "))
                 if modify_items == 1:
                     newf_name = input("Enter New First name you want to modify: ")
                     newl_name = input("Enter New Last name you want to modify: ")
                     newkey_name = newf_name + " " + newl_name
-                    md[newkey_name] = md[key_name]
-                    del md[key_name]
+                    md[newkey_name] = md[key_name]  # Assign new key name to dictionary
+                    del md[key_name]   # Delete old key name from dictionary
                     print('Saved')
-                    return
+                    return # Return function to stop all progress
                 elif modify_items == 5:
                     status = ["Vaccinated","Unvaccinated","Boosted"]
                     for i in range(len(status)):
@@ -94,6 +94,7 @@ def modify_items(md):
                     new_value = status[state - 1]
                 else:
                     new_value = input("Please enter new value: ")
+                # Auto type convert using key and function as value
                 set_type = {"Age":int,"Address":str,"Phone Number":str,"Vaccination Status":str}
                 new_value = set_type[id_[modify_items - 2]](new_value)
                 md[key_name][id_[modify_items-2]] = new_value
@@ -107,16 +108,16 @@ def modify_items(md):
 
 def delete_items(md):
     while True:
-        if len(md.keys()) == 0:
+        if len(md.keys()) == 0: #check if no data 
             print("There is no data to delete!")
             return
         else:
             f_name = input("Enter First name: ")
             l_name = input("Enter Last name: ")
             del_key = f_name + " " + l_name
-            if del_key in md.keys():
-                print(f"Trying to delete ID {del_key}...")
-                del md[del_key]
+            if del_key in md.keys():  #Check if user's input is valid in dictionary
+                print(f"Trying to delete ID of {del_key}...")
+                del md[del_key] #delete item    
                 print("Successfully deleted!")
             else:
                 print("Sorry, we couldn't delete this data , seem like it doesn't exist")
