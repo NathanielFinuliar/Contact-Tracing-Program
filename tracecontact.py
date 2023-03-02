@@ -5,7 +5,15 @@ main_dictionary = {"Jonathan Finuliar":{"Age":22,"Address":"Malabon","Phone Numb
                    "Eve Campo":{"Age":18,"Address":"Navotas","Phone Number":"09988842314","Vaccination Status": "Boosted"}}
 
 def display_menu(me):
-    print("----Contact tracing!---")
+    print("/"*39)
+    print("$"," "*16, " "*18, "$")  
+    print("$"," "* 5, "CONTACT TRACING PROGRAM", " " *5,"$")
+    print("$"," " * 3, "coded by Nathaniel Finuliar", " " *3,"$")
+    print("$"," " * 12, "BSCOE 2-2", " " *12, "$")
+    print("$"," "*16, " "*18, "$") 
+    print("/"*39)
+    print(" ")
+    print(" "*8, "MENU", " "*8)
     print("="*23)
     for i in range(len(me)):
         print(f"{i+1} -> {me[i]}")
@@ -46,10 +54,10 @@ def search_items(md):
                 else:
                     print()
                     print(f"All datas contain for {key_name}:")
-                    print("-"*20)
+                    print("-"*40)
                     for i,x in md[key_name].items():
                         print(f"{i.capitalize()} : {x}")
-                    print("-"*20)
+                    print("-"*40)
                 return
             else:
                 print("Sorry, we can't find this data")
@@ -118,10 +126,10 @@ def show_alldata(md):
     else:
         for num,data in md.items():
             print()
-            print(f"* * * {num} * * *")
+            print(f"✯ ✯ ✯ {num} ✯ ✯ ✯")
             for sub,element in data.items():
                 print(f"{sub.capitalize()} : {element}")
-            print("-"*40) 
+            print("."*35) 
 
 def exit_():
     global loop_holder
@@ -132,8 +140,7 @@ def exit_():
                 loop_holder = False
                 print("Exiting...")
                 print(" ")
-                print("Thank you for using this program")
-                print("Always take care and have a good day!")
+                print("Thank you for using this program!")
                 print(" ")
             else:
                 option_getter()
